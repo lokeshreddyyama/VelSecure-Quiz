@@ -824,3 +824,18 @@ body.buzzer-live .buzzer-button:not(:disabled) {
   background: var(--success);
   box-shadow: 0 0 8px var(--success);
 }
+.bg-video {
+  position: fixed;  /* Or absolute for relative containers */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Scales video to cover without distortion */
+  z-index: -1;       /* Sends it behind other elements */
+}
+
+.content {
+  position: relative;
+  z-index: 1;        /* Ensures content appears on top */
+  /* Add padding/margins as needed */
+}
